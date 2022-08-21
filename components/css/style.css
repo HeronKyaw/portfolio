@@ -1,0 +1,107 @@
+/* CSS variables */
+:root {
+    --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+  --primary-color: #8a00ff;
+  --primary-shadow: #8b8eaf;
+  --transition: .3s;
+}
+
+/* home background image */
+.bgimage {
+    height:100vh;
+    /* position:relative; */
+}
+.bgimage::after {
+    content: "";
+    background: url('/components/images/black-and-white-laptop-hands.jpg');
+    background-size:cover;
+    background-attachment: fixed;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* text css above home image*/
+.hero_title {
+    font-size: 3rem;
+}
+.hero_desc {
+    font-size: 2rem;
+}
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+/* about section image css */
+.imageAboutPage {
+    width: 100%;
+}
+
+.navbarDark {
+    background-color: #000000;
+}
+
+.nav-item .nav-link, .navbar-brand {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin-right: 5px;
+    transition: var(--transition);
+}
+
+.nav-item .nav-link:hover{
+    padding: 0 0 2px 0;
+    color: var(--primary-color);
+    font-weight: var(--bold-font);
+    box-shadow: var(--primary-color) 0 3px;
+}
+
+svg {
+    border-radius: 20px;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    transition: 1s;
+}
+
+svg:hover {
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.skills {
+    width: 80% !important;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 3rem;
+    row-gap: 3.5rem;
+}
+
+/* animation */
+.dot1, .dot2, .dot3 {
+    display: inline-block;
+}
+
+.dot1 {
+    --animate-duration: 1s;
+}
+.dot2 {
+    --animate-duration: 1100ms;
+}
+.dot3 {
+    --animate-duration: 1200ms;
+}
